@@ -3,6 +3,7 @@ import React ,{useState}  from 'react';
 import AddTaskForm from "./AddTaskForm/AddTaskForm.tsx";
 import Task from "./Task/Task.tsx";
 
+
 interface Task {
     id: string;
     text: string;
@@ -29,17 +30,13 @@ const App: React.FC = () => {
         <>
             <div className="app">
                 <AddTaskForm onSubmit={createText}/>
-
                 <div>
                     {tasks.map(task => (
                         <Task key={task.id} id={task.id} text={task.text} deleteTask={deleteTask} />
                     ))}
                 </div>
             </div>
-
-
         </>
-
     );
 };
 export default App;

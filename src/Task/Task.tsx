@@ -1,4 +1,5 @@
 import React from 'react';
+import "./task.css"
 
 interface TaskProps {
     id: string;
@@ -9,8 +10,8 @@ interface TaskProps {
 const Task: React.FC<TaskProps> = ({ id, text, deleteTask }) => {
     return (
         <div>
-            <span>{text}</span>
-            <button onClick={() => deleteTask(id)}>Delete</button>
+            <span className="span-text">{text}</span>
+            <button className="btnDelete" onClick={() => deleteTask(id)}>Delete</button>
         </div>
     );
 };

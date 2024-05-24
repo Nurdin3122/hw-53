@@ -1,5 +1,8 @@
+
 import React, {ChangeEvent, useState} from "react";
 import {Text} from "../Types.ts";
+import "./AddTaskForm.css";
+
 interface AddTaskFormProps {
     onSubmit: (task:Text) => void;
 }
@@ -36,7 +39,7 @@ const AddTaskForm: React.FC<AddTaskFormProps> = ({ onSubmit }) => {
                 type="text"
                 onChange={onTextChange}
             />
-            <button type="submit">Add</button>
+            <button type="submit" className="btnAdd">Add</button>
         </form>
     );
 };
